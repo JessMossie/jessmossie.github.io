@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Jessica Mostert</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Learn more about Jessica Mostert, an IT student passionate about cybersecurity, digital systems, and lifelong learning.">
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+    }
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#a78bfa',
+            accent: '#f9a8d4',
+            secondary: '#7dd3fc',
+            darkbg: '#0b0f19',
+            lightbg: '#fdfcff',
+            lighttext: '#1f2937'
+          },
+          animation: {
+            fade: 'fadeIn 1s ease-in-out forwards'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1'}
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-darkbg text-white transition-colors duration-500">
+
+  <header class="flex items-center justify-between px-6 py-4 border-b border-primary">
+    <h1 class="text-primary text-2xl font-bold">Jessica</h1>
+    <nav>
+      <ul class="flex gap-6 text-lg">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="text-primary">About</a></li>
+        <li><a href="learning.html">Learning</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button onclick="toggleTheme()" class="ml-4 px-3 py-1 border border-primary rounded hover:bg-primary hover:text-darkbg transition">Toggle</button>
+  </header>
+
+  <main class="flex flex-col md:flex-row items-center justify-center min-h-[80vh] px-6 gap-10">
+    <div class="md:w-1/2 animate-fade">
+      <h2 class="text-4xl font-bold text-primary mb-6">About Me</h2>
+      <p class="text-gray-400 mb-4 leading-relaxed">
+        Hi there — I’m Jessica, an aspiring tech professional currently studying Informatics Honours at 
+        Stellenbosch University. My academic focus is on systems analysis, cybersecurity, and data-driven decision-making.
+      </p>
+      <p class="text-gray-400 mb-4 leading-relaxed">
+        Beyond my studies, I actively pursue online certifications and hands-on projects that stretch my understanding 
+        of digital systems, IT auditing, and cyber risk management.
+      </p>
+      <p class="text-gray-400 leading-relaxed">
+        When I’m not immersed in tech, you’ll find me reading, crocheting, gaming, or exploring the intersection between 
+        technology and people — because good systems don’t just work, they work for people.
+      </p>
+    </div>
+
+    <div class="md:w-1/2 flex justify-center">
+      <img src="assets/image2.jpeg" alt="Jessica casual photo" class="rounded-2xl w-96 h-auto object-cover border-4 border-accent shadow-lg animate-fade" />
+    </div>
+  </main>
+
+  <footer class="border-t border-primary py-6 mt-10 text-center text-sm">
+    <div class="flex justify-center gap-6 mb-4">
+      <a href="https://github.com/JessMossie" aria-label="GitHub" class="hover:text-secondary">GitHub</a>
+      <a href="https://www.linkedin.com/in/jessica-mostert-40b918256/" aria-label="LinkedIn" class="hover:text-secondary">LinkedIn</a>
+    </div>
+    <p>Designed & Built by <span class="text-primary">Jessica Mostert</span> &copy; 2025</p>
+  </footer>
+
+</body>
+</html>
